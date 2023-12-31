@@ -9,9 +9,11 @@ public class User {
 	
 	private Integer id;
 	
+	//minimum 2 characters for name to be acceptable
 	@Size(min=2)
 	private String name;
 	
+	//birthdate cannot be a date from the future 
 	@Past
 	private LocalDate birthDate;
 	
