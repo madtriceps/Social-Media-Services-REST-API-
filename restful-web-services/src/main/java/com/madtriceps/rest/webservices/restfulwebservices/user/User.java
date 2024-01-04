@@ -10,11 +10,11 @@ public class User {
 	private Integer id;
 	
 	//minimum 2 characters for name to be acceptable
-	@Size(min=2)
-	private String name;
+	@Size(min=2,message="name should have atleast 2 characters ")
+	private String name; 
 	
-	//birthdate cannot be a date from the future 
-	@Past
+	//birthDate cannot be a date from the future 
+	@Past(message="birthdate should be in the past")
 	private LocalDate birthDate;
 	
 	public User(Integer id, String name, LocalDate birthDate) {
